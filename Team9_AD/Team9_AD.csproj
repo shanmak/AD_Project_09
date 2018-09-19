@@ -1,0 +1,221 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78D9FF95-9073-4B8C-AC9C-6E32BF8C9774}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Team9_AD</RootNamespace>
+    <AssemblyName>Team9_AD</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WCF\Service1.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddClass\Android_Appr.cs" />
+    <Compile Include="AddClass\DamageUpdate.cs" />
+    <Compile Include="AddClass\RepAck.cs" />
+    <Compile Include="WCF\RepClass.cs" />
+    <Compile Include="AndroidBiz\BusinessLogicAndroid.cs" />
+    <Compile Include="App_Code\Approver.cs" />
+    <Compile Include="App_Code\Department.cs" />
+    <Compile Include="App_Code\Disbursement_List.cs" />
+    <Compile Include="App_Code\Disbursement_List_dtl.cs" />
+    <Compile Include="App_Code\Dmg_Goods_Dtl.cs" />
+    <Compile Include="App_Code\Employee.cs" />
+    <Compile Include="App_Code\Employee_Request.cs" />
+    <Compile Include="App_Code\Emp_Request_items.cs" />
+    <Compile Include="App_Code\GenerateReport1.cs" />
+    <Compile Include="App_Code\Goods_Received.cs" />
+    <Compile Include="App_Code\Inventory.cs" />
+    <Compile Include="App_Code\Inventory_purchase.cs" />
+    <Compile Include="App_Code\Invent_Pur_Dtl.cs" />
+    <Compile Include="App_Code\Logic_University_Model.cs" />
+    <Compile Include="App_Code\Store_Request.cs" />
+    <Compile Include="App_Code\Store_Request_items.cs" />
+    <Compile Include="App_Code\Supplier.cs" />
+    <Compile Include="App_Code\UpdateWarehouseAndDamage.cs" />
+    <Compile Include="App_Code\Voucher_details.cs" />
+    <Compile Include="App_Code\Wrehse_Trans.cs" />
+    <Compile Include="App_Code\Wrehse_Trans_Dtl.cs" />
+    <Compile Include="Business Logics\BusinessLogic.cs" />
+    <Compile Include="Business Logics\HodBusinessLogic.cs" />
+    <Compile Include="HodClass\EmplyReqDetails.cs" />
+    <Compile Include="Model\Approver.cs" />
+    <Compile Include="Model\Department.cs" />
+    <Compile Include="Model\Disbursement_List.cs" />
+    <Compile Include="Model\Disbursement_List_dtl.cs" />
+    <Compile Include="Model\Dmg_Goods_Dtl.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Employee_Request.cs" />
+    <Compile Include="Model\Emp_Request_items.cs" />
+    <Compile Include="Model\GenerateReport1.cs" />
+    <Compile Include="Model\Goods_Received.cs" />
+    <Compile Include="Model\Inventory.cs" />
+    <Compile Include="Model\Inventory_purchase.cs" />
+    <Compile Include="Model\Invent_Pur_Dtl.cs" />
+    <Compile Include="Model\Logic_University.cs" />
+    <Compile Include="Model\Request_completed.cs" />
+    <Compile Include="Model\Store_Request.cs" />
+    <Compile Include="Model\Store_Request_items.cs" />
+    <Compile Include="Model\Supplier.cs" />
+    <Compile Include="Model\Supplier_Goods_received.cs" />
+    <Compile Include="Model\UpdateWarehouseAndDamage.cs" />
+    <Compile Include="Model\Voucher_details.cs" />
+    <Compile Include="Model\Wrehse_Trans.cs" />
+    <Compile Include="Model\Wrehse_Trans_Dtl.cs" />
+    <Compile Include="WCF\IService1.cs" />
+    <Compile Include="WCF\Service1.svc.cs">
+      <DependentUpon>Service1.svc</DependentUpon>
+    </Compile>
+    <Compile Include="WCF\WarehouseRetrivelList.cs" />
+    <Compile Include="WCF\WCF_Android_Appr.cs" />
+    <Compile Include="WCF\WCF_Approver.cs" />
+    <Compile Include="WCF\WCF_DamageUpdate.cs" />
+    <Compile Include="WCF\WCF_Department.cs" />
+    <Compile Include="WCF\WCF_Disbursement_List_dtl.cs" />
+    <Compile Include="WCF\WCF_Disbusement_List.cs" />
+    <Compile Include="WCF\WCF_Dmg_Goods.cs" />
+    <Compile Include="WCF\WCF_Dmg_Goods_Dtl.cs" />
+    <Compile Include="WCF\WCF_Employee.cs" />
+    <Compile Include="WCF\WCF_Employee_Request.cs" />
+    <Compile Include="WCF\WCF_Emp_Request_items.cs" />
+    <Compile Include="WCF\WCF_Goods_Received.cs" />
+    <Compile Include="WCF\WCF_Inventory.cs" />
+    <Compile Include="WCF\WCF_Inventory_purchase.cs" />
+    <Compile Include="WCF\WCF_Invent_Pur_Dtl.cs" />
+    <Compile Include="WCF\WCF_Store_Request.cs" />
+    <Compile Include="WCF\WCF_Store_Request_items.cs" />
+    <Compile Include="WCF\WCF_Supplier.cs" />
+    <Compile Include="WCF\WCF_updateWarehouseAndDamage.cs" />
+    <Compile Include="WCF\WCF_Voucher_details.cs" />
+    <Compile Include="WCF\WCF_Wrehse_Trans.cs" />
+    <Compile Include="WCF\WCF_Wrehse_Trans_Dtl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile3.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58152</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58152/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
